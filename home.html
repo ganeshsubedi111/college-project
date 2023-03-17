@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>college project</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-n1t7MSmkd0+TglTc19zSgddY7OuIfbBu1rzNc2Ln0eCJ7l1SmEahxVz3Pq/ycpE+I4HnTX9B4g4sJtMQF1KbQw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header>
+    <div class="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+    <nav>
+      <img src="/IMAGE/logo.png" alt="Logo">
+
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#ABOUT">ABOUT</a></li>
+        <li><a href="#COURSES">COURSES</a></li>
+        <li><a href="#CONTACT">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="image-text">
+    <p>Welcome to SOCH College of Information Technology </p>
+    </p>
+  </div>
+  <hr>
+  <hr>
+  <section id="ABOUT">
+    <p>
+    <pre>
+
+      SOCH College of Information Technology is a college located in Nepal
+      that offers courses and programs related to information technology. 
+      They provide education and training in various areas of IT such as 
+      software development, networking, cybersecurity, database management,
+      and more.The college is committed to providing quality education and
+      practical training to prepare students for careers in the IT industry.
+      They offer a range of degree and diploma programs, as well as various
+      certification courses and training programs.
+    </pre>
+    </p>
+    <img src="/IMAGE/img.webp" alt="">
+  </section>
+  <section id="COURSES">
+
+    <h2>B.Sc.CSIT </h2>
+    <strong> B.Sc.CSIToffered by Institute of Science and Technology,
+      Tribhuvan University, Nepal is a four years  8 semesters academic program.</strong>
+    <p>This program ensures that graduates have a broad basic knowledge and </p>
+    <p>creative skills to conceive, design, build and exploit Information </p>
+    <p>Processing Systems. In addition to this, the program also stimulates</p>
+    <p>development of soft skills such as team work, effective communication,</p>
+    <p>technology management etc. These skills are acquired through the execution</p>
+    <p>of various projects, lab works, presentations, case studies and seminars </p>
+    <p> throughout the entire program.</p>
+
+    <p> It is a challenging and demanding program. Nevertheless it is also rewarding</p>
+    <p>and fun. Thus it is the right program for students who are passionate about </p>
+    <p>Technology and Communication. </p>
+    <img src="/IMAGE/download.jfif" alt="">
+
+    <hr>
+  </section>
+  <hr>
+  <section id="CONTACT">
+    <h2>Contact Us</h2>
+    <form action="submit-form.php" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required><br> <br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required><br> <br>
+      <label for="phone">phone</label>
+      <input type="tel" id="phone" name="phone" required><br> <br>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required><br> <br>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea><br> <br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  <section id="contact-info">
+    <h3>Contact Information</h3>
+    <ul>
+      <li><i class="fas fa-phone"></i> <a href="tel:+977123456789">+977-1-23456789</a></li> <br>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:info@sochcollege.edu.np">info@sochcollege.edu.np</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> POkhara, Nepal</li>
+    </ul>
+  </section>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle input');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('slide');
+    });
+  </script>
+
+
+</body>
+
+</html>

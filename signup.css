@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+    * {
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    body {
+      background-image: url('/IMAGE/black');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 50%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #3e8e41;
+    }
+
+    h5 {
+      text-align: center;
+      font-size: 20px;
+      color: aliceblue;
+    }
+
+    .error {
+      color: red;
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* For screens smaller than 768px */
+@media (max-width: 767px) {
+  body {
+    background-image: none;
+    background-color: #fff;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  body {
+    background-image: url('/IMAGE/black');
+  }
+
+  form {
+    width: 50%;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 50%;
+  }
+}

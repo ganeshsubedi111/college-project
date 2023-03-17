@@ -1,0 +1,113 @@
+* {
+    margin-top: 0px;
+}
+
+strong {
+    font-size: 20px;
+    margin-top: 10px;
+    position: relative;
+    color: aliceblue;
+}
+
+h3 {
+    font-size: 25px;
+    color: aliceblue;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 6%;
+
+}
+
+img {
+    height: 100vh;
+    width: 100%;
+    opacity: 100%;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    background-color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+.form-container[type="text"],
+.form-container[type="password"] {
+    color: #b44242;
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 10px;
+   
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #111;
+}
+
+input[type="button"] {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #673636;
+}
+
+form {
+    width: 60%;
+    margin: 150px;
+    margin-left: 600px;
+
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url('/IMAGE/black');
+}
+
+.error-message {
+    color: red;
+    font-size: 22px;
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .form-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    form {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    body {
+        background-size: cover;
+    }
+}
+
+    
+
+
