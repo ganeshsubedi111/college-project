@@ -1,0 +1,128 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif
+    ;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+}
+.wrapper{
+    background: #f7f7f7;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0,0, 0.1),0 32px 64px -48px rgba(0, 0,0, 0.5);
+
+}
+.form{
+    padding: 25px 30px ;
+}
+.form header{
+    font-size: 25px ;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 10px solid #e6a6e6;
+}
+.form form{
+     margin: 20px 0;
+}
+
+.form form .field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+.form form .field input
+{
+   outline: none; 
+}
+ form .name-details .field:first-child{
+    margin-right:10px ;
+}
+ form .name-details:last-child{
+    margin-left: 10px;
+
+}
+.form form .field
+{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.form form .field label{
+    margin-bottom: 2px;
+
+}
+.form form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form form .image input {
+    font-size: 17px;
+
+}
+.form form .button input {
+    margin-top: 13px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.form form .button input:hover{
+    background-color: green;
+    transition: 0.8s;
+}
+.form form .field i {
+    position: absolute;
+    right: 15px;
+    color: #ccc;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color:#881bfc
+}
+.form .link a:hover{
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 15px;
+    padding-left: 6px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+.success-message{
+    color: rgb(7, 241, 15);
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 6px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
