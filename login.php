@@ -1,37 +1,54 @@
 <?php
-// Start session
-session_start();
-
-// Connect to database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "signup";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-// Get form data
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-// Check if user exists and password is correct
-$sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  // Set session variables
-  $_SESSION['username'] = $username;
-  $_SESSION['loggedin'] = true;
-
-  // Redirect to home page
-  header('Location: home.php');
-} else {
-  echo "Invalid username or password";
-}
-
-mysqli_close($conn);
+include'success.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js">
+   <link rel=stylesheet href="style.css">
+
+    <title>login</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="form login">
+            <header>login</header>
+            <form action="login.php" method="POST">
+
+                <div class="name-details">
+
+                    <div class="field input">
+
+                        <input type="text" name="uname" placeholder="Enter your Username Here"  >
+                    </div>
+                    <div class="field input">
+
+                        <input type="password" name="password" placeholder="Enter your password Here"  >
+
+                    </div>
+                    <!-- display error message if set -->
+               <?php if(isset($errors)) { ?>
+              <div class="error-message"><?php echo $errors; ?></div>
+              <?php } ?>
+
+                    <div class="field button">
+                        <input type="submit"  name="submit"  value="login">
+                    </div>
+
+                </div>
+            </form>
+            <div class="link">
+                Dont Have an account? <a href="signup.php">Signup</a>
+            </div>
+        </section>
+    </div>
+   
+   
+</body>
+
+</html>
