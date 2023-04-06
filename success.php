@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
             session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['sendusername'] = $username;
-            header("location:index.php");
+            header("location:home.html");
         } else {
             $errors=" * Invalid Password";
         }
