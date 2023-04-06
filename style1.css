@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Default styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  background-image: url("/HTML/IMAGE/soch.webp");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.description p pre {
+  font-size: 20px;
+}
+
+.image-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: rgba(12, 9, 9, 0.837);
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+nav img {
+  height: 50px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+#ABOUT {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  flex-basis: 60%;
+  margin-right: 20px;
+}
+
+.image {
+  flex-basis: 30%;
+}
+
+#COURSES {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  margin-right: 20px;
+}
+
+.image-container img {
+  width: 50%;
+  height: auto;
+}
+
+.text-container {
+  max-width: 500px;
+}
+
+#ABOUT {
+  background-color: beige;
+  height: 65vh;
+  font-size: 20px;
+}
+
+#ABOUT img {
+  float: right;
+  height: 490px;
+  padding: -5px;
+}
+
+#COURSES {
+  background-color: #fff;
+  height: 100vh;
+}
+
+#COURSES img {
+  float: right;
+  height: 177px;
+  width: 389px;
+  padding-top: -66px;
+}
+
+#CONTACT h2 {
+  text-align: center;
+}
+
+#CONTACT form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+  border-radius: 2px solid black;
+  background-color: azure;
+}
+#contact-info {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#contact-info h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#contact-info li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#contact-info i {
+  margin-right: 10px;
+}
+
+#contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+#contact-info a:hover {
+  text-decoration: underline;
+}
+
+#contact-info .fas {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
