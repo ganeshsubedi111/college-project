@@ -1,38 +1,70 @@
-<?php
-// Connect to database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "signup";
+ <?php
+ include'db.php';
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign up</title>
+</head>
+<body>
+    <div class="wrapper">
+        <section class="form signup">
+            <header>Sign Up</header>
+            <form action="signup.php" method="POST">
+                <div class="name-details">
+                    <div class="field input">
+                        <input type="text" name="name" placeholder="Enter your fullname here" >
+                    </div>
+                    <div class="field input">
+                        <input type="text" name="uname" placeholder="Enter your username here" >
+                        
+                    </div>
+                    
+                
+                
+                    <div class="field input">
+                        <input type="email" name="email" placeholder="Enter your email here" >
+                       
+                    </div>
+                   
+                 
+                 
+                    <div class="field input">
+                        <input type="password" name="password" placeholder="Enter your password here" >
+                    </div>
+                    <div class="field input">
+                        <input type="password" name="con-password" placeholder="Confirm password here" >
+                        
+                    </div>
+                    <?php if(isset($errors)) { ?>
+                    <div class="error-message"><?php echo $errors; ?></div>
+                    <?php } ?>
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+             <!-- display success message if set -->
+                    <?php if(isset($success)) { ?>
+                    <div class="success-message"><?php echo $success; ?></div>
+                    <?php } ?>
+                    
+                    <div class="field button">
+                        <input type="submit" name="submit" value="Create account">
+                    </div>
 
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+                    
 
-// Get form data
-$username = $_POST['username'];
-$pasword = $_POST['password'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-
-// Check if username already exists
-$sql = "SELECT * FROM users WHERE username='$username'";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-  echo "Username already exists";
-} else {
-  // Insert new user into database
-  $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email','$phone)";
-  if (mysqli_query($conn, $sql)) {
-    echo "User registered successfully";
+                </div>
+            </form>
+            <div class="link">
+                Already Signup ? <a href="login.php">Login </a>
+            </div>
+        </section>
+    </div>
     
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-  }
-}
+</body>
 
-mysqli_close($conn);
-?>
+</html>
+
